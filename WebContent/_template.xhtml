@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<style>
+#painelLateral {
+	position: relative;
+	float: left;
+}
+
+#logo {
+	float: none;
+}
+
+#conteudo {
+	width: 50%;
+}
+</style>
+</h:head>
+
+<h:body>
+	<div id="cabecalho">
+		<h1 style="text-align: right; float: right; margin: 0px;">
+			<i> <strong style="color: #00008B">My</strong><strong
+				style="color: #EE0000">SocialLogus</strong></i>
+		</h1>
+		<div id="logo">
+			<h:graphicImage library="img" name="Logus.jpg" />
+		</div>
+		<br />
+	</div>
+
+	<div>
+		<div id="painel lateral" style="margin: 0px; padding: 0px;">
+			<h:form>
+				<p:growl autoUpdate="true" />
+				<p:menubar>
+					<p:menuitem value="Home" url="Home.xhtml" icon="ui-icon-home" />
+					<p:submenu label="Funcionários" icon="ui-icon-person">
+						<p:menuitem value="Todos os Funcionários"
+							url="TodosFuncionarios.xhtml" icon="ui-icon-person" />
+						<p:submenu label="Por Departamento">
+							<p:menuitem value="Projeto de Softwares ERP e Complementos"
+								url="#" icon="ui-icon-person" />
+							<p:menuitem value="Sustentação de ERP e Complementos" url="#"
+								icon="ui-icon-person" />
+							<p:menuitem value="Projetos de Sustentação PDV" url="#"
+								icon="ui-icon-person" />
+							<p:menuitem value="ADM / Financeiro" url="#"
+								icon="ui-icon-person" />
+							<p:menuitem value="Implantação" url="#" icon="ui-icon-person" />
+							<p:menuitem value="Consultoria" url="#" icon="ui-icon-person" />
+							<p:menuitem value="Comercial" url="#" icon="ui-icon-person" />
+							<p:menuitem value="Marketing" url="#" icon="ui-icon-person" />
+						</p:submenu>
+					</p:submenu>
+					<p:submenu label="Mapa da Logus" icon="ui-icon-clipboard">
+						<p:menuitem value="Mapa" url="#" icon="ui-icon-disk" />
+					</p:submenu>
+					<p:menuitem value="Sobre a Logus" icon="ui-icon-comment" />
+				</p:menubar>
+			</h:form>
+		</div>
+		<br />
+	</div>
+	<div id="painelTop">
+		<ui:insert name="painelTop"></ui:insert>
+	</div>
+	<br />
+	<div id="pagina" align="right">
+		<center>
+			<p:panelGrid columns="3">
+				<ui:insert name="pagina" />
+			</p:panelGrid>
+		</center>
+	</div>
+	<div id="botaoLogin" align="right">
+		<ui:insert name="botaoLogin" />
+	</div>
+	<br />
+	<div id="footer" style="text-align: botoom; bottom: 0; background: #CFCFFC; height: 200px;"/>
+</h:body>
+</html>

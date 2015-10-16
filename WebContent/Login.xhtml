@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+	
+<ui:composition template="_template.xhtml">
+	<ui:define name="painelTop" id="painelTop">
+		<center>
+			<p:panel id="form" style="padding : 100px; width: 300px;">
+				<p:messages>
+					<h3>Use o Login do Prisma</h3>
+					<h:panelGrid columns="2">
+						<p:outputLabel value="Login :" for="user"/>
+						<p:inputText id="user" value="#{loginBean.user}"/>
+					</h:panelGrid>
+				</p:messages>
+			</p:panel>
+		</center>
+	</ui:define>
+	<ui:define name="botaoLogin">
+		<center>
+			<p:commandButton value="login" action="#{loginBean.}"/>
+		</center>
+	</ui:define>
+</ui:composition>
+</html>
